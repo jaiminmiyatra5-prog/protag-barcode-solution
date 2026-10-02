@@ -1,0 +1,312 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(10, 61, 107, 0.8),
+      rgba(26, 95, 166, 0.7)),
+    url('/hero_industrial_packaging.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.1;
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-2xl);
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.feature-card {
+  background-color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust-section {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.trust-section h2 {
+  color: var(--white);
+}
+
+.trust-content p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 75vh;
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /*
+    IMPORTANT:
+    Desktop <br> mobile ma hide thase.
+    
+    Desktop:
+    Barcode Solution &
+    Industrial Packaging You Can Rely On
+
+    Mobile:
+    Barcode Solution
+    & Industrial
+    Packaging You
+    Can Rely On
+  */
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 0 5px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+    padding: 0 5px;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5px;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .trust-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .trust-section h2 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 70vh;
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 0;
+  }
+
+  .hero-subheadline {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+
+  .hero-actions {
+    padding: 0;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .trust-content p {
+    font-size: 0.95rem;
+    padding: 0 5px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+  .hero {
+    min-height: 68vh;
+  }
+
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-subheadline {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+/* Explore Products */
+.hero-explore-btn {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.hero-explore-btn:hover,
+.hero-explore-btn:focus,
+.hero-explore-btn:active {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TALK TO OUR TEAM
+========================= */
+
+.trust-button {
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.trust-button:hover,
+.trust-button:focus,
+.trust-button:active {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.hero-explore-btn {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+.hero-explore-btn:hover,
+.hero-explore-btn:focus,
+.hero-explore-btn:active {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
